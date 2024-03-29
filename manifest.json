@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Đánh giá nhanh - DTU",
   "description": "Tiện ích đánh giá nhanh giảng viên trường đại học Duy Tân",
-  "version": "1.0.0",
+  "version": "1.0",
   "permissions": ["scripting", "activeTab", "storage"],
   "action": {
     "default_popup": "./popup/popup.html"
