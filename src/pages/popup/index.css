@@ -328,6 +328,11 @@ a {
 	}
 }
 
+.label {
+	font-size: 0.9rem;
+	font-weight: 600;
+}
+
 .app-body {
 	width: 280px;
 	height: 100%;
@@ -356,12 +361,12 @@ a {
 
 .rating {
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
 	/* min-width: 100px; */
 }
-.rating__label {
-	font-size: 0.9rem;
-	font-weight: 600;
-}
+
 .rating__select {
 	position: relative;
 	/* min-width: 350px; */
