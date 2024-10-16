@@ -2,11 +2,23 @@
 	"manifest_version": 3,
 	"name": "Đánh giá nhanh - DTU",
 	"description": "Tiện ích đánh giá nhanh giảng viên trường đại học Duy Tân",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	"permissions": ["scripting", "activeTab", "storage"],
 	"action": {
-		"default_popup": "./popup/popup.html"
+		"default_popup": "popup.html"
 	},
+
+	"background": {
+		"service_worker": "background.bundle.js",
+		"type": "module"
+	},
+	"content_scripts": [
+		{
+			"matches": ["*://*.duytan.edu.vn/*"],
+			"js": ["content.bundle.js"],
+			"css": ["content.bundle.css"]
+		}
+	],
 	"icons": {
 		"16": "./assets/logo/icon16.png",
 		"32": "./assets/logo/icon32.png",

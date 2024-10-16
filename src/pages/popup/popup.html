@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="stylesheet" href="index.css" /> -->
+    <!-- webpack will bundle this file -->
+  </head>
+  <body class="app-body">
+    <header class="app-header">
+      <h2 class="header__title">
+        Đánh giá Nhanh - <span class="header__title-highlight">DTU</span>
+      </h2>
+    </header>
+
+    <main class="app-main">
+      <div class="rating">
+        <label class="rating__label" for="ratingSelect">Chọn xếp hạng:</label>
+        <div class="rating__select">
+          <select name="lecturer" id="ratingSelect">
+            <option value="1">Tốt</option>
+            <option value="2">Khá</option>
+            <option value="3">Trung bình</option>
+            <option value="4">Trung bình yếu</option>
+            <option value="5">Yếu</option>
+            <option value="6">Kém</option>
+          </select>
+        </div>
+      </div>
+
+      <hr />
+      <div class="checkbox-group">
+        <div class="checkbox-group__item">
+          <div class="checkbox-wrapper">
+            <div class="block">
+              <input
+                data-index="0"
+                id="autoEvaluation"
+                class="scrollCheckbox"
+                type="checkbox"
+              />
+              <label for="autoEvaluation"></label>
+            </div>
+          </div>
+          <label class="rating__label" for="autoEvaluation"
+            >Tự động đánh giá</label
+          >
+        </div>
+
+        <div class="checkbox-wrapper-4">
+          <input class="inp-cbx" id="skipComments" type="checkbox" />
+          <label class="cbx" for="skipComments"
+            ><span>
+              <svg width="12px" height="10px">
+                <use xlink:href="#check-4"></use></svg></span
+            ><span>Bỏ qua ý kiến</span></label
+          >
+          <svg class="inline-svg">
+            <symbol id="check-4" viewbox="0 0 12 10">
+              <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+            </symbol>
+          </svg>
+        </div>
+
+        <div class="checkbox-wrapper-4">
+          <input class="inp-cbx" id="scrollToConfirmation" type="checkbox" />
+          <label class="cbx" for="scrollToConfirmation"
+            ><span>
+              <svg width="12px" height="10px">
+                <use xlink:href="#check-4"></use></svg></span
+            ><span>Tự động cuộn đến xác nhận</span></label
+          >
+          <svg class="inline-svg">
+            <symbol id="check-4" viewbox="0 0 12 10">
+              <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+            </symbol>
+          </svg>
+        </div>
+      </div>
+
+      <hr />
+      <div class="checkbox-group">
+        <p>
+          <span style="color: #ed3ef7">(Thử nghiệm)</span> dùng AI để giải mã
+          xác nhận
+        </p>
+        <div class="checkbox-group__item">
+          <div class="checkbox-wrapper">
+            <div class="block">
+              <input
+                data-index="0"
+                id="autoFinish"
+                class="scrollCheckbox"
+                type="checkbox"
+              />
+              <label for="autoFinish"></label>
+            </div>
+          </div>
+          <label class="rating__label" for="autoFinish"
+            >Tự động hoàn thành</label
+          >
+        </div>
+        <!-- TODO: Add feature API key -->
+
+        <!---->
+        <!-- <div -->
+        <!--   style=" -->
+        <!--     display: flex; -->
+        <!--     gap: 10px; -->
+        <!--     align-items: center; -->
+        <!--     justify-content: space-between; -->
+        <!--   " -->
+        <!-- > -->
+        <!--   <p>API key</p> -->
+        <!---->
+        <!--   <div -->
+        <!--     style=" -->
+        <!--       display: flex; -->
+        <!--       gap: 10px; -->
+        <!--       align-items: center; -->
+        <!--       justify-content: space-between; -->
+        <!--     " -->
+        <!--   > -->
+        <!--     <svg -->
+        <!--       xmlns="http://www.w3.org/2000/svg" -->
+        <!--       width="24" -->
+        <!--       height="24" -->
+        <!--       viewBox="0 0 24 24" -->
+        <!--       fill="none" -->
+        <!--       stroke="currentColor" -->
+        <!--       stroke-width="2" -->
+        <!--       stroke-linecap="round" -->
+        <!--       stroke-linejoin="round" -->
+        <!--       class="icon icon-tabler icons-tabler-outline icon-tabler-eye" -->
+        <!--     > -->
+        <!--       <path stroke="none" d="M0 0h24v24H0z" fill="none" /> -->
+        <!--       <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /> -->
+        <!--       <path -->
+        <!--         d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" -->
+        <!--       /> -->
+        <!--     </svg> -->
+        <!--     <svg -->
+        <!--       xmlns="http://www.w3.org/2000/svg" -->
+        <!--       width="24" -->
+        <!--       height="24" -->
+        <!--       viewBox="0 0 24 24" -->
+        <!--       fill="none" -->
+        <!--       stroke="currentColor" -->
+        <!--       stroke-width="2" -->
+        <!--       stroke-linecap="round" -->
+        <!--       stroke-linejoin="round" -->
+        <!--       class="icon icon-tabler icons-tabler-outline icon-tabler-eye-off" -->
+        <!--     > -->
+        <!--       <path stroke="none" d="M0 0h24v24H0z" fill="none" /> -->
+        <!--       <path d="M10.585 10.587a2 2 0 0 0 2.829 2.828" /> -->
+        <!--       <path -->
+        <!--         d="M16.681 16.673a8.717 8.717 0 0 1 -4.681 1.327c-3.6 0 -6.6 -2 -9 -6c1.272 -2.12 2.712 -3.678 4.32 -4.674m2.86 -1.146a9.055 9.055 0 0 1 1.82 -.18c3.6 0 6.6 2 9 6c-.666 1.11 -1.379 2.067 -2.138 2.87" -->
+        <!--       /> -->
+        <!--       <path d="M3 3l18 18" /> -->
+        <!--     </svg> -->
+        <!--     <span>•••••••••••••••</span> -->
+        <!--   </div> -->
+        <!--   <p>edit</p> -->
+        <!-- <input -->
+        <!--   style="width: 100%; height: 30px" -->
+        <!--   type="password" -->
+        <!--   placeholder="API key gemini" -->
+        <!-- /> -->
+        <!-- </div> -->
+      </div>
+
+      <div class="button-container">
+        <button class="btn" role="button" id="comfirmButton">Đánh giá</button>
+      </div>
+    </main>
+    <footer class="app-footer">
+      <a
+        href="https://github.com/ngtuonghy"
+        style="font-weight: bold; font-size: 1.2em"
+        target="_blank"
+        >by ngtuonghy</a
+      >
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+        "
+      >
+        <span>v1.1.0</span>
+        <a
+          href="https://github.com/ngtuonghy/teacher-evaluation-dtu"
+          target="_blank"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="currentColor"
+            class="bi bi-github"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+            />
+          </svg>
+        </a>
+      </div>
+    </footer>
+  </body>
+  <!-- <script src="index.js" type="module"></script> --><!-- webpack will bundle this file -->
+</html>
