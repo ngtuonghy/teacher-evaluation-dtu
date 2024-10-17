@@ -2,7 +2,6 @@
 	"name": "teacher-evaluation-dtu",
 	"version": "1.1.0",
 	"description": "Tiện ích đánh giá nhanh giảng viên trường đại học Duy Tân",
-	"main": "index.js",
 	"scripts": {
 		"build": "webpack --mode production",
 		"dev": "webpack --mode development --watch --no-devtool"
@@ -10,7 +9,7 @@
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
-	"packageManager": "pnpm@9.12.0+sha512.4abf725084d7bcbafbd728bfc7bee61f2f791f977fd87542b3579dcb23504d170d46337945e4c66485cd12d588a0c0e570ed9c477e7ccdd8507cf05f3f92eaca",
+	"packageManager": "pnpm@9.12.0",
 	"devDependencies": {
 		"@babel/core": "^7.25.8",
 		"@babel/preset-env": "^7.25.8",

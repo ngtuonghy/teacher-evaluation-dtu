@@ -1,4 +1,4 @@
-import { initModel } from "@/lib/gemini-ai";
+import { initModel } from "@shared/lib/gemini-ai";
 async function decodeCaptcha(file) {
 	if (file === undefined) {
 		return { success: false, message: "Captcha not found" };
