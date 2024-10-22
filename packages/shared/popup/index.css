@@ -1,3 +1,36 @@
+:root {
+	--background: #ffffff; /* hsl(0, 0%, 100%) */
+	--foreground: #0a0a0a; /* hsl(240, 10%, 3.9%) */
+
+	--card: #ffffff; /* hsl(0, 0%, 100%) */
+	--card-foreground: #0a0a0a; /* hsl(240, 10%, 3.9%) */
+
+	--popover: #ffffff; /* hsl(0, 0%, 100%) */
+	--popover-foreground: #0a0a0a; /* hsl(240, 10%, 3.9%) */
+
+	--primary: #f43f5e; /* hsl(346.8, 77.2%, 49.8%) */
+	--primary-foreground: #ffeef2; /* hsl(355.7, 100%, 97.3%) */
+
+	--secondary: #f2f5fa; /* hsl(240, 4.8%, 95.9%) */
+	--secondary-foreground: #191a1a; /* hsl(240, 5.9%, 10%) */
+
+	--third: #007bff;
+
+	--muted: #f2f5fa; /* hsl(240, 4.8%, 95.9%) */
+	--muted-foreground: #71717a; /* hsl(240, 3.8%, 46.1%) */
+
+	--accent: #f2f5fa; /* hsl(240, 4.8%, 95.9%) */
+	--accent-foreground: #191a1a; /* hsl(240, 5.9%, 10%) */
+
+	--destructive: #e11d48; /* hsl(0, 84.2%, 60.2%) */
+	--destructive-foreground: #fafafa; /* hsl(0, 0%, 98%) */
+
+	--border: #e4e4e7; /* hsl(240, 5.9%, 90%) */
+	--input: #e4e4e7; /* hsl(240, 5.9%, 90%) */
+	--ring: #f43f5e; /* hsl(346.8, 77.2%, 49.8%) */
+	--radius: 0.5rem;
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -36,10 +69,10 @@ a {
 }
 .btn {
 	margin-top: 15px;
-	background-color: #3dd1e7;
+	background-color: var(--primary);
 	border: 0 solid #e5e7eb;
 	box-sizing: border-box;
-	color: #000000;
+	color: #ffffff;
 	display: flex;
 	font-family:
 		ui-sans-serif,
@@ -342,7 +375,7 @@ a {
 }
 
 .app-header {
-	padding: 10px;
+	padding: 5px;
 	margin: 0 auto;
 }
 .header__title {
@@ -374,7 +407,7 @@ a {
 .rating__select select {
 	appearance: none;
 	width: 100%;
-	font-size: 0.88rem;
+	font-size: 0.9rem;
 	padding: 0.575em 6em 0.675em 1em;
 	background-color: #fff;
 	border: 1px solid #caced1;
@@ -422,4 +455,27 @@ hr {
 	border: 0;
 	border-top: 1px dashed #dfdfde;
 	width: 100%;
+}
+
+a {
+	all: unset;
+}
+
+.app-ads {
+	background-color: var(--primary);
+	display: flex;
+	justify-content: center;
+	gap: 5px;
+	height: 30px;
+	align-items: center;
+	cursor: pointer;
+}
+
+.content-label {
+	color: white;
+	font-size: 0.85rem;
+	font-weight: 600;
+	text-wrap: nowrap;
+	cursor: pointer;
+	border: none;
 }
